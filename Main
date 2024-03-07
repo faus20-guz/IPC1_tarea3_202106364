@@ -1,0 +1,37 @@
+package com.mycompany.figura;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author guz18
+ */
+
+public class Main {
+    public static void main(String[] args) {
+        //lista
+        List<Figura> figuras = new ArrayList<>();
+
+        // Crear las instancias
+        figuras.add(new Triangulo(5, 3));
+        figuras.add(new Cuadrado(4));
+        figuras.add(new Circulo(6));
+
+        // Imprimir
+        for (Figura figura : figuras) {
+            if (figura instanceof Triangulo) {
+                System.out.println("Triangulo - Área: " + figura.calcularArea());
+            } else if (figura instanceof Cuadrado) {
+                System.out.println("Cuadrado - Área: " + figura.calcularArea());
+            } else if (figura instanceof Circulo) {
+                System.out.println("Círculo - Área: " + figura.calcularArea());
+            }
+        }
+    }
+}
